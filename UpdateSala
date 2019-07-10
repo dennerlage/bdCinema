@@ -1,0 +1,3 @@
+update sala
+set salaNome = 'Sala 01'
+where salaCod = 1;
