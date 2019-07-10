@@ -1,0 +1,2 @@
+Insert Into cliente values(1, 'Denner', 'Físico', '999.999.999-99', '9.999.999', '2001-04-01', 'Rua da Casa', 
+'99.999-999', '(47)988173235', 'denner@email.com');
