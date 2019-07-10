@@ -1,0 +1,3 @@
+UPDATE cliente
+SET CliNom = 'Denner Lage'
+WHERE CliCod = 1;
