@@ -1,0 +1,1 @@
+Delete from filme where FilCod = 1;
