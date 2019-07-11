@@ -1,4 +1,7 @@
-create table if not exists ingresso(IngCliCod int, IngSesCod int,
-CONSTRAINT Primary key(IngCliCod, IngSesCod),
+create table if not exists ingresso(IngCliCod int, IngSesFilCod int, IngSesPolCod int, IngSesSalaCod int,
+Constraint Primary key(IngCliCod, IngSesFilCod,IngSesPolCod, IngSesSalaCod),
 CONSTRAINT fk_CliCod FOREIGN KEY (IngCliCod) REFERENCES cliente (CliCod),
-CONSTRAINT fk_SesCod FOREIGN KEY (IngSesCod) REFERENCES sessao (SesCod));
+CONSTRAINT fk_SesCod FOREIGN KEY (IngSesFilCod) REFERENCES sessao (SesFilCod),
+CONSTRAINT fk_SesCod FOREIGN KEY (IngSesPolCod) REFERENCES sessao (SesPolCod),
+CONSTRAINT fk_SesCod FOREIGN KEY (IngSesSalaCod) REFERENCES sessao (SesSalaCod));
+
