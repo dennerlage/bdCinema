@@ -1,3 +1,3 @@
 update sala
-set salaNome = 'Sala 01'
-where salaCod = 1;
+set SalaNom = 'Sala 01'
+where SalaCod = 1;
