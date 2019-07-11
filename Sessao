@@ -1,5 +1,5 @@
-create table if not exists sessao(SesCod int primary key auto_increment, SesFilCod int, SesSalaCod int, 
-SesHor datetime,  SesIdioma varchar(15), SesPolCod int, 
+create table if not exists sessao(SesFilCod int, SesSalaCod int, SesHor datetime,  SesIdioma varchar(15), SesPolCod int,
+CONSTRAINT primary key(SesFilCod,SesSalaCod, SesPolCod),
 CONSTRAINT fk_FilCod FOREIGN KEY (SesFilCod) REFERENCES filme (FilCod),
 CONSTRAINT fk_SalaCod FOREIGN KEY (SesSalaCod) REFERENCES sala (SalaCod),
 CONSTRAINT fk_PolCod FOREIGN KEY (SesPolCod) REFERENCES poltrona (PolCod));
