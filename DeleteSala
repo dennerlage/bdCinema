@@ -1,1 +1,1 @@
-delete from sala where salaCod = 1;
+delete from sala where SalaCod = 1;
