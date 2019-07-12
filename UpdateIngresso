@@ -1,0 +1,3 @@
+update ingresso 
+set IngCliCod = 2
+Where IngCliCod = 1;
