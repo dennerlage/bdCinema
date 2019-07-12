@@ -1,0 +1,15 @@
+set @flag = 0;
+delimiter $$
+create procedure login(in Usuario varchar(45), in Senha varchar(15), out Flag int)
+Begin
+set Flag = 0;
+if exists(select * from cliente where (Usuario = CliUsuNom) and Senha = CliSen) then
+	set Flag = 1;
+Else
+	set Flag = 0;
+End if;
+End$$
+delimiter ;
+
+call login('dodomaster', '123456', @flag);
+select @flag;
