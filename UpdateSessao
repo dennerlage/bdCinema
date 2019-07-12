@@ -1,0 +1,3 @@
+update sessao
+set SesHor = '2019-07-10 21:30'
+where SesFilCod = 1 and SesSalaCod = 1 and SesPolCod = 1;
