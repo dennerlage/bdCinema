@@ -1,0 +1,6 @@
+truncate cliente;
+alter table cliente drop column CliCod;
+alter table cliente add column CliCod int first;
+alter table cliente add column CliUsuNom varchar(45) after CliTip;
+alter table cliente add column CliSen varchar(15) after CliUsuNom;
+alter table cliente add constraint pk_CliCod primary key (CliCod, CliUsuNom);
