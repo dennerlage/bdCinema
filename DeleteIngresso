@@ -1,0 +1,1 @@
+delete from ingresso where IngSesFilCod = 1 and IngSesSalaCod = 1 and IngSesPolCod = 1 and IngCliCod = 2;
