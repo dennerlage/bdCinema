@@ -1,0 +1,1 @@
+delete from sessao where SesFilCod = 1 and SesSalaCod = 1 and SesPolCod = 1;
