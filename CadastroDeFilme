@@ -1,0 +1,19 @@
+-- Flag = 1 Usuario Logado / Flag = 0 Usuario não Logado
+delimiter $$
+create procedure cadastroFilme (in cliente int, in nomeFilme varchar(45), in genero varchar(45), in Flag int)
+begin
+If (Flag = 1) then
+	If exists(select * from cliente where (cliente = CliCod) and CliTip = 'Master') then
+		insert into filme (FilNom, FilGen)values(nomeFilme,genero);
+        select 'Filme Cadastrado';
+	Else
+		select 'Usuário não é Master';
+  End if;
+Else
+	select Flag as 'Usuário não Logado!';
+End if;
+End$$
+delimiter ;
+
+call cadastroFilme (1,'Titanic 2', 'Romance', @flag);
+select * from filme;
