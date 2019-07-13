@@ -1,0 +1,14 @@
+delimiter $$
+create procedure compraIngresso (in cliente int, in filme int, in poltrona int, in sala int, in Flag int)
+Begin
+	if (Flag = 1) then
+		insert into ingresso values(cliente, filme, poltrona, sala);
+        select 'Compra efetuada com sucesso!';
+    else
+		    select 'Usuário não Logado!';
+    end if;
+End$$
+delimiter ;
+
+call compraIngresso(1,1,2,1,@flag);
+select * from ingresso;
