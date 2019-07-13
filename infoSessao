@@ -1,0 +1,16 @@
+delimiter $$
+create procedure infoSessao(in cliente int, in filme int, in poltrona int, in sala int, Flag int )
+begin
+	if (Flag = 1) then
+		If exists(select * from ingresso where IngCliCod = cliente and IngSesFilCod = filme and IngSesPolCod = poltrona and IngSesSalaCod = sala ) then
+			select * from sessao where SesFilCod = filme and SesPolCod = Poltrona and SesSalaCod = sala;
+		else
+			select 'Usuário não detém o ingresso para a sessão!';
+    end if;
+  else
+	  select 'Usuário não Logado!';
+  end if;
+end$$
+delimiter ;
+
+call infoSessao(1,1,1,1,@flag);
